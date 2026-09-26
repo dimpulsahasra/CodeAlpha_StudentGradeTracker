@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎓 Student Grade Tracker</h1>
+        <p class="subtitle">
+            Manage student marks, grades and performance
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <div class="dashboard">
+
+            <div class="dashboard-card">
+                <h3>👨‍🎓 Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>📊 Average Marks</h3>
+                <p id="averageMarks">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>🏆 Highest Marks</h3>
+                <p id="highestMarks">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>📈 Performance</h3>
+                <p id="performance">-</p>
+            </div>
+
+        </div>
+
+
+        <!-- ADD STUDENT -->
+
+        <div class="card">
+
+            <h2>➕ Add Student</h2>
+
+            <label>Student Name</label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter student name"
+            >
+
+
+            <label>Marks</label>
+
+            <input
+                type="number"
+                id="marks"
+                placeholder="Enter marks"
+                min="0"
+                max="100"
+            >
+
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+        </div>
+
+
+        <!-- STUDENT RECORDS -->
+
+        <div class="student-section">
+
+            <h2>📋 Student Records</h2>
+
+            <div id="studentList"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

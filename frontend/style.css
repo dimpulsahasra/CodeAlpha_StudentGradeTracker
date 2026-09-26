@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #eeeeee;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 22px 15px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    color: #667eea;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* CARDS */
+
+.card,
+.student-section {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* STUDENT RECORD */
+
+.student-record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7ff;
+    border-left: 5px solid #667eea;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.student-record span {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.student-record button {
+    width: auto;
+    margin-top: 0;
+    padding: 10px 16px;
+    background: #e74c3c;
+    font-size: 14px;
+}
+
+.student-record button:hover {
+    background: #c0392b;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .student-record {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .student-record button {
+        width: 100%;
+    }
+}
